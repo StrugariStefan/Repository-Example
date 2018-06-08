@@ -7,6 +7,11 @@ public class CarFactoryLog {
 		assemblyLine.put(new Component("motor",10));
 		assemblyLine.put(new Component("capota",3));
 		
+		
+		assemblyLine.take();
+		assemblyLine.put(new Component("capota",3));
+		
+		
 	}
 }
 
