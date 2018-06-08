@@ -28,11 +28,9 @@ public class AssemblyLine {
 	}
 	
 	public Component take() {
-		/* 
-		 * TODO
-		 * the method should put a component on the line
-		 * */
-		return null;
+		Component comp = line.getLast();
+		line.removeLast();
+		return comp;
 	}
 	
 	public void put( Component component ) {
