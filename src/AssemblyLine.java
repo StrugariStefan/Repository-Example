@@ -28,9 +28,15 @@ public class AssemblyLine {
 	}
 	
 	public Component take() {
-		Component comp = line.getLast();
-		line.removeLast();
-		return comp;
+		if( line.size() == 0 ) {
+			System.out.println("Banda de asamblare este vida!");
+			return null;
+		} else {
+			Component component = line.getLast();
+			line.removeLast();
+			System.out.println("Componenta " + component.name + " a fost sustrasa cu succes!" );
+			return component;
+		}
 	}
 	
 	public void put( Component component ) {
